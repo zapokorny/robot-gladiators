@@ -1,8 +1,10 @@
+/* GAME FUNCTIONS */
+
 // function to check if player wants to fight or skip
 var fightOrSkip = function () {
   // ask player if they'd like to fight or run
   var promptFight = window.prompt(
-    'Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.'
+    'Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to lock in action.'
   );
 
   // validate prompt answer
@@ -22,7 +24,8 @@ var fightOrSkip = function () {
     // if yes (true), leave fight
     if (confirmSkip) {
       window.alert(
-        playerInfo.name + " has decided to skip this fight. Goodbye!"
+        playerInfo.name +
+          " has chickened out and decided not to fight. Goodbye!"
       );
       // subtract money from playerMoney for skipping, but don't let them go into the negative
       playerInfo.money = Math.max(0, playerInfo.money - 10);
