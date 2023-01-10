@@ -37,3 +37,5 @@ var fightOrSkip = function () {
   }
   return false;
 };
+
+fightOrSkip();
